@@ -1,7 +1,12 @@
+from neuronio.Tratamento import *
+
 senha = ""
 print("-----------------------------------")
 print("-Digite sua senha de 8 caracteres: ")
 print("-----------------------------------")
-input(senha)
 
-print(senha)
+def pega_senha():
+    senha = input(">")
+    tratamento = Tratamento(senha)
+
+pega_senha()
