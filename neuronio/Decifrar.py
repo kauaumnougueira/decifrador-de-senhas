@@ -4,7 +4,6 @@ class Decifrar():
 
     def __init__(self, array_senha):
         self.senha = array_senha
-        print("b")
 
     alfabeto = "abcdefghijklmnopqrstuvwxy0123456789!@#$%&?"
     alfabetoarray = list(alfabeto) #array alfabeto
@@ -22,9 +21,7 @@ class Decifrar():
     '''
     senha_decifrada = []
 
-    #senha numerico
     def decifrar(self):
-        print(self.senha)
         for i in range(42): #1
             for j in range(42): #2
                 for k in range(42): #3
@@ -36,5 +33,7 @@ class Decifrar():
                                         senha_decifrada = [self.alfabetoarray[i], self.alfabetoarray[j], self.alfabetoarray[k], self.alfabetoarray[l], self.alfabetoarray[m], self.alfabetoarray[n], self.alfabetoarray[o], self.alfabetoarray[p]]
                                         #print("senha gerada: ", senha_decifrada)
                                         if np.array_equal(self.senha, senha_decifrada): 
-                                            print("achei, a senha é: ", senha_decifrada)    
-                                            return senha_decifrada    
+                                            print("achei, a senha é: ", senha_decifrada) 
+                                            senhaDecifrada = "".join(senha_decifrada)
+                                            return senhaDecifrada
+                                            break
